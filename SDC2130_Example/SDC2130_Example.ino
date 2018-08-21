@@ -1,8 +1,8 @@
 //=========================HEADER=============================================================
 /*
    Roboteq SDC2130/SC2160 Example Code     
-   AUTHOR: Jason Traud
-   DATE: November 25, 2014
+   AUTHOR: Jason Traud 
+   DATE: November 25, 2018
    
    This is a simple test program to demonstrate commands 
    and movements of our programmable MLT-JR platform using
@@ -10,11 +10,13 @@
       
    Hardware: Arduino Uno R3  (MCU-050-000)
              Roboteq SDC2130 (TE-144-030)
+             RS232 3-5V TTL Serial Converter Cable - No TTL Connector (MCU-026-072)
+             Encoder Pull-Up (TE-179-000)
    
    SDC2130 DB-15      -------------   MLT-JR System
    -----------------                    -------
-            6*     -------------------   Arduino Rx (D0)
-            7*     -------------------   Arduino Tx (D1)
+            2*     -------------------   Arduino Rx (D0)
+            3*     -------------------   Arduino Tx (D1)
                                                      
             4      -------------------   Right Motor Encoder A Channel
             8      -------------------   Right Motor Encoder B Channel
@@ -26,16 +28,18 @@
             14     -------------------   Left Motor Encoder 5V
             13     -------------------   Right Motor Encoder Ground
             
-   * NOTE: Pins 6 and 7 are for TTL level serial. Pins 2 and 3 are also
-           labeled as Tx and Rx in the motor controllers datasheet but 
-           these are RS-232 level.  
+   * NOTE: Pins 2 and 3 are labeled as Tx and Rx in the motor 
+           controllers datasheet but these are RS-232 level.  
   
    References:
      Datasheet (Includes detailed pinout of the DB15 connector on page 6)
        http://roboteq.com/index.php/docman/motor-controllers-documents-and-files/documentation/datasheets/sdc21xx-datasheet/63-sdc21xx-datasheet/file
      User Manual (Describes commands and communication protocol)
        http://roboteq.com/index.php/docman/motor-controllers-documents-and-files/documentation/user-manual/7-nextgen-controllers-user-manual/file
-     
+     Schematic for Rs232 Connection
+       https://www.superdroidrobots.com/Schematics/Roboteq_RS232.pdf
+     Roboteq Encoder Connection
+       https://www.superdroidrobots.com/Schematics/Roboteq_SDC2260_&_SDC2230.pdf
 			
    License: CCAv3.0 Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/3.0/)
    You're free to use this code for any venture. Attribution is greatly appreciated. 
